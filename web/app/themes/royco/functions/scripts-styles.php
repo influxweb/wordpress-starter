@@ -4,10 +4,10 @@
 
 // Load scripts (header.php)
 function royco_header_scripts(){
-    if (!is_admin()) {
+   
     	// Reove jquery and add latest version to footer only on the front end
     	wp_deregister_script('jquery');
-    	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), '1.11.3', true);
+    	wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"), false, '1.11.3');
     	wp_enqueue_script('jquery');
     	
     	// Add our custom function file
@@ -17,9 +17,10 @@ function royco_header_scripts(){
         // Add another script
         //wp_register_script('scriptname', get_template_directory_uri() . '/js/.js', array(), '1.0.0', true);
         //wp_enqueue_script('scriptname');
-    }
+    
 }
-add_action('init', 'royco_header_scripts');
+add_action('wp_enqueue_scripts', 'royco_header_scripts');
+
 
 // Load CSS (header.php)
 function royco_styles(){
