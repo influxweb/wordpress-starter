@@ -30,7 +30,8 @@ module.exports = function( grunt ) {
 		watch: {
 			compass: {
 				files: [
-					'web/app/themes/royco/sass/*.{scss,sass}'
+					'web/app/themes/royco/sass/*.{scss,sass}',
+					'web/app/themes/royco/sass/**/**.{scss,sass}'
 				],
 				tasks:['compass', 'reload']
 			},
