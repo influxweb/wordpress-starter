@@ -12,16 +12,20 @@ We use a modern WordPress stack that helps us get started with the best developm
 * Blank Wordpress starter theme
 
 ## Requirements
-
 * PHP >= 5.4
+* grunt
 
-## Notes
+## QuickStart
+* Clone Repo
+* Create a Database
+* Import dev.sql
+* Create a Host
+* Update `home_url` and `site_url` in the options table
+* Rename `.env.example` to `.env` and update with your details
+* Run `npm install` in terminal
+* Run `grunt` in terminal
 * Access WP admin at `http://example.com/wp/wp-admin`
 
-## Deploys
-
-SOON
-
-## Documentation
+## Deployment
 
 SOON
